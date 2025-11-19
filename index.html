@@ -1,0 +1,60 @@
+<!-- ذخیره با نام: index.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آزمایشگاه مجموعه‌ها</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- صفحه 1 -->
+<section id="page1">
+<h1>آزمایشگاه مجموعه‌ها</h1>
+<div class="anim-icons">
+  <span>+</span>
+  <span>-</span>
+  <span>×</span>
+  <span>÷</span>
+</div>
+</section>
+
+<!-- صفحه 2 -->
+<section id="page2" style="display:none;">
+<h1>پروفایل شما</h1>
+<div class="profile-container">
+  <div class="profile-img" onclick="editProfile()">👤</div>
+  <div id="profileData" style="margin-top:20px;"></div>
+</div>
+</section>
+
+<!-- صفحه 3 -->
+<section id="page3" style="display:none;">
+<h2>تعریف مجموعه A:</h2>
+<label>عضو کدام مجموعه شناخته شده است؟</label>
+<select id="knownSet">
+  <option value="">انتخاب کنید...</option>
+  <option value="N">N (اعداد طبیعی)</option>
+  <option value="Z">Z (اعداد صحیح)</option>
+</select>
+<label>شرط را به صورت کلامی بنویسید:</label><br>
+<input id="textCondition" type="text" placeholder="مثلاً بزرگتر مساوی 3">
+<button onclick="makeExpression()">نمایش نماد ریاضی</button>
+<div id="mathResult" class="result-box"></div>
+</section>
+
+<!-- صفحه 4 -->
+<section id="page4" style="display:none;">
+<h2>انجام عملیات ریاضی روی مجموعه‌ها</h2>
+<label>نحوه نمایش اعضا:</label>
+<select id="memberDisplay">
+  <option value="list">نوشتن اعضا</option>
+  <option value="symbol">نماد ریاضی</option>
+</select>
+<div id="output" class="result-box"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
